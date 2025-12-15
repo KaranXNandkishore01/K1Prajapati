@@ -40,12 +40,53 @@
         <div class="contact-container">
             <div class="contact-content">
                 <h2 class="section-title"><span>Let's Connect</span></h2>
-                <p>I'm currently open to internships and part-time opportunities and freelance collaborations. If you have a project
+                <div class="contact-form-container">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Karan Prajapati" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone No.</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Current Status</label>
+                                <select id="status" name="status" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Available">Student</option>
+                                    <option value="Busy">Engineer</option>
+                                    <option value="Add fold below banner">Recuiter</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your Idea/project..."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-btn-container">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                <p>I'm currently open to internships and part-time opportunities and freelance collaborations. If you have a project or idea
                     that needs AI expertise, let's talk. <br>
-                <br> Drop any message or suggestion at any time in my mail.</p>
+                </p>
 
                 <div class="social-links">
-                    <a href="www.linkedin.com/karanxprajapatix1" class="social-btn"><i
+                    <a href="https://linkedin.com/karanxprajapatix1" class="social-btn"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/KaranXNandkishore01" class="social-btn"><i
                             class="fab fa-github"></i></a>
@@ -65,3 +106,4 @@
 
 
 </html>
+
