@@ -1,13 +1,13 @@
 /* --- CSS Reset & Variables --- */
 :root {
     --bg-color: #020617;
-    --card-bg: rgba(30, 27, 75, 0.3);
-    --card-border: rgba(139, 92, 246, 0.2);
+    --card-bg: rgba(30, 27, 75, 0.25);
+    --card-border: rgba(139, 92, 246, 0.15);
     --accent-color: #7dd3fc;
     --accent-secondary: #a78bfa;
     --accent-tertiary: #34d399;
     --text-white: #f8fafc;
-    --text-gray: #cbd5e1;
+    --text-gray: #e2e8f0;
     --transition-speed: 0.4s;
     --gradient-hover: linear-gradient(135deg, #7dd3fc 0%, #a78bfa 50%, #34d399 100%);
 }
@@ -17,6 +17,21 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.4);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.8);
 }
 
 body {
@@ -212,10 +227,11 @@ header {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--text-white);
+    letter-spacing: -0.02em;
 }
 
 .hero p {
@@ -353,10 +369,10 @@ section {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 4rem;
-    color: var(--text-white);
     color: #020617;
+    letter-spacing: -0.01em;
 }
 
 .section-title span {
@@ -792,12 +808,60 @@ textarea {
 }
 /* --- Footer --- */
 footer {
-    padding: 2rem;
+    padding: 3rem 10% 2rem;
     text-align: center;
     border-top: 1px solid rgba(139, 92, 246, 0.2);
     color: var(--text-gray);
-    font-size: 0.9rem;
-    background: rgba(2, 6, 23, 0.5);
+    font-size: 0.95rem;
+    background: rgba(2, 6, 23, 0.8);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-info h3 {
+    color: var(--text-white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #7dd3fc, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-info i {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.footer-info a {
+    color: var(--text-gray);
+    transition: color 0.3s;
+}
+
+.footer-info a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
 }
 
 /* --- Animations --- */

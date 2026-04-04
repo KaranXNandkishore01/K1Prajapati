@@ -22,6 +22,11 @@ function closeMenu() {
     icon.classList.add('fa-bars');
 }
 
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
 // Sticky Header Effect
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
