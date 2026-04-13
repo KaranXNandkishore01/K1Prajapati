@@ -1,473 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Karan Prajapati, an AI/ML Engineer specializing in Deep Learning and Generative AI.">
-    <title>K.Prajapati.</title>
-   <link rel="icon" type="image/x-icon" href="light_icn.png">
+    <title>K.Prajapati | AI/ML Engineer</title>
+    <link rel="icon" type="image/x-icon" href="light_icn.png">
+    
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    
+    <!-- Ambient glowing backgrounds for performance -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
 
-    <!-- Header -->
-    <header>
-        <a href="index.html" class="logo" onclick="window.scrollTo(0,0)">
-            <i>
-                <img src="light_icn.png" width="20" height="20" style="vertical-align: middle;" alt="icon">
-            </i>
-            Prajapati. </a>
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <a href="#hero" class="logo">
+            <span class="logo-mark"><img src="light_icn.png" alt="icon"></span>
+            Prajapati.
+        </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
-        <nav>
+        <nav class="nav-container">
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#certifications" class="nav-item">Certifications</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="hero-subtitle">Hello, I'm</span>
-            <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
-            <h2>AI/ML Engineer specializing in Deep Learning, and Generative AI.</h2>
-            <br>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Work</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
-            </div>
-        </div>
-        <div class="hero-image-container">
-            <div class="hero-circle"></div>
-            <!-- Using a high-quality placeholder that fits the dark theme context -->
-            <img src="k2img.png" alt="Karan Prajapati" class="hero-img">
-        </div>
-    </section>
-
-<section id="about" style="padding-top: 120px;">
-        <h2 class="section-title"><span>About Me</span></h2>
-        <div class="grid-container">
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="Coding">
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content reveal fade-up">
+                    <span class="badge">Hello, I'm</span>
+                    <h1 class="hero-title">Karan <span class="text-gradient">Prajapati.</span></h1>
+                    <h2 class="hero-subtitle">AI & ML Engineer</h2>
+                    <p class="hero-desc">Specializing in Deep Learning, Generative AI, and bridging the gap between heavy research models and real-world deployment.</p>
+                    
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                    </div>
                 </div>
-                <i class="fas fa-code"></i>
-                <h3>Background</h3>
-                <p>I am a passionate engineer with a deep focus on algorithmic problem solving. My journey started with
-                    Web development and evolved into mastering neural networks, Deep Learning, and Machine Learning.</p>
-                <h3>Experience</h3>
-                <p>I had worked as a project's lead in my institutions. <br> I do graphic designing at <a href="https://sites.google.com/view/thevisarggalaxy/home">TheVisargGalaxy</a> as a co-founder. <br>I too manage TheVisargGalaxy</p>
-                <h3>Interests</h3>
-                <p>I love to read books and play piano in my free time.</p>
                 
-            </div>
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" alt="Education">
+                <div class="hero-visual reveal fade-left" data-delay="200">
+                    <div class="hero-image-wrapper glass-card">
+                        <img src="k2img.png" alt="Karan Prajapati" class="hero-img">
+                        <div class="orbital orbital-1"></div>
+                        <div class="orbital orbital-2"></div>
+                    </div>
                 </div>
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Education</h3>
-                <p><strong>RGPV University, Bhopal</strong><br>
-                    B.Tech in CSE (AI & ML)<br>
-                    Year: 3rd , Sem: 5th <br>
-                grade: A</p>
-                <p><strong>Madhya Pradesh Board of Secondary Education</strong><br>
-                    12th<br>
-                    Class: 12th <br>
-                percentage: 90.6%</p>
-                <p><strong>Madhya Pradesh Board of Secondary Education</strong><br>
-                    10th<br>
-                    Class: 10th <br>
-                percentage: 94.8%</p>
             </div>
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg"
-                        alt="Future Goals">
-                </div>
-                <i class="fas fa-rocket"></i>
-                <h3>Exploration</h3>
-                <p>Currently exploring Large Language Models (LLMs) and edge deployment. I aim to bridge the gap between
-                    heavy research models and consumer devices. I also explore other fields of AI and ML. <br> and I feel like I am the traveller in this field and exploring continuously.</p>
+            
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll</span>
             </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="#certifications" class="btn btn-primary" style="text-decoration: none;">My Certifications</a>
-        </div>
-    </section>
+        </section>
 
-<section id="skills" style="padding-top: 120px;">
-        <h2 class="section-title"><span>Technical Skills</span></h2>
-        <div class="grid-container">
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Languages">
-                </div>
-                <i class="fab fa-python"></i>
-                <h3>Languages</h3>
-                <p>Python, C++, SQL, JavaScript</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">ES6</span>
-                </div>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                <div class="title-line"></div>
             </div>
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrKJR2KxcRJ1GaZqhvQivt537Q77BD3qLdLg&s"
-                        alt="Machine Learning">
+            
+            <div class="about-grid">
+                <!-- Background & Experience -->
+                <div class="glass-card reveal fade-up" data-delay="100">
+                    <div class="card-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Background</h3>
+                    <p>I am a passionate engineer with a deep focus on algorithmic problem solving. My journey started with Web development and evolved into mastering neural networks, Deep Learning, and Machine Learning.</p>
+                    
+                    <h3 class="mt-4">Experience</h3>
+                    <ul class="experience-list">
+                        <li><strong>Project Lead</strong> for institution initiatives.</li>
+                        <li><strong>Co-founder & Graphic Designer</strong> at <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="text-gradient">TheVisargGalaxy</a>.</li>
+                    </ul>
                 </div>
-                <i class="fas fa-network-wired"></i>
-                <h3>Machine Learning</h3>
-                <p>TensorFlow, PyTorch, Scikit-learn</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Regression</span>
-                    <span class="skill-tag">Clustering</span>
-                    <span class="skill-tag">XGBoost</span>
+                
+                <!-- Education -->
+                <div class="glass-card reveal fade-up" data-delay="200">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <h4>RGPV University, Bhopal</h4>
+                        <p>B.Tech in CSE (AI & ML) <br><span class="highlight">Year 3, Sem 5 | Grade: A</span></p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>MP Board of Secondary Education</h4>
+                        <p>12th Class <br><span class="highlight">90.6%</span></p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>MP Board of Secondary Education</h4>
+                        <p>10th Class <br><span class="highlight">94.8%</span></p>
+                    </div>
                 </div>
-            </div>
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYY3ZeVsFdXSC09bM8Ed49VTwx0Hfi5_ZUlw&s" alt="Computer Vision">
-                </div>
-                <i class="fas fa-eye"></i>
-                <h3>Domains</h3>
-                <p>Computer Vision & NLP</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">OpenCV</span>
-                    <span class="skill-tag">Transformers</span>
-                    <span class="skill-tag">YOLO</span>
-                    <span class="skill-tag">BERT</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-<section id="projects" style="padding-top: 120px;">
-        <h2 class="section-title"><span>Featured Projects</span></h2>
-        <div class="grid-container">
-            <!-- Project 1 -->
-            <div class="info-block">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg"
-                        alt="School Management website">
+                <!-- Exploration & Interests -->
+                <div class="glass-card reveal fade-up" data-delay="300">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Exploration</h3>
+                    <p>Currently exploring Large Language Models (LLMs) and edge deployment. I aim to bridge heavy research models and consumer devices. I feel like a traveller in this field, continuously exploring AI and ML.</p>
+                    
+                    <h3 class="mt-4">Interests</h3>
+                    <p>I love to read books and play piano in my free time.</p>
                 </div>
-                <h3>School Management website</h3>
-                <p>A comprehensive school management and automation platform tailored for Master Mind School.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Web Development</span>
-                    <span class="skill-tag">Management System</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/KaranXNandkishore01/MasterMindSchool.git" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i>
-                        Code </a>
-                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
+                <div class="title-line"></div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="info-block">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
-                        alt="Sai Construction Business Website">
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="glass-card skill-card reveal scale-in" data-delay="100">
+                    <div class="skill-header">
+                        <i class="fab fa-python skill-icon"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <p class="skill-desc">Python, C++, SQL, JavaScript</p>
+                    <div class="skill-tags">
+                        <span>NumPy</span><span>Pandas</span><span>ES6</span>
+                    </div>
                 </div>
-                <h3>Business Website</h3>
-                <p>A professional business website developed for Sai Construction.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python & Django</span>
-                    <span class="skill-tag">HTML/CSS/JS</span>
-                    <span class="skill-tag">SQLite</span>
+
+                <!-- Machine Learning -->
+                <div class="glass-card skill-card reveal scale-in" data-delay="200">
+                    <div class="skill-header">
+                        <i class="fas fa-network-wired skill-icon"></i>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <p class="skill-desc">TensorFlow, PyTorch, Scikit-learn</p>
+                    <div class="skill-tags">
+                        <span>Regression</span><span>Clustering</span><span>XGBoost</span>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/KaranXNandkishore01/SaiConstruction_Site.git" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i>
-                        Code </a>
+
+                <!-- Domains -->
+                <div class="glass-card skill-card reveal scale-in" data-delay="300">
+                    <div class="skill-header">
+                        <i class="fas fa-eye skill-icon"></i>
+                        <h3>Domains</h3>
+                    </div>
+                    <p class="skill-desc">Computer Vision & NLP</p>
+                    <div class="skill-tags">
+                        <span>OpenCV</span><span>Transformers</span><span>YOLO</span><span>BERT</span>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 3 -->
-            <div class="info-block">
-                <div class="project-image">
-                    <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg"
-                        alt="HireXHub AI Job Platform">
-                </div>
-                <h3>HireXHub</h3>
-                <p>An AI-powered platform designed for a seamless connection between jobseekers and hirers.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Django & SQLite</span>
-                    <span class="skill-tag">WebGL & JS</span>
-                    <span class="skill-tag">AI Models</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/KaranXNandkishore01/HireXHub.com.git" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i>
-                        Code </a>
-                </div>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                <div class="title-line"></div>
             </div>
 
-        </div>
-    </section>
-
-<section id="certifications" style="padding-top: 120px;">
-        <h2 class="section-title"><span>My Certifications</span></h2>
-        <div class="grid-container">
-            <!-- Certification 1 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg" alt="Certification 1">
-                </div>
-                <h3>Python Full Stack Web Development</h3>
-                <p>By Udemy</p>
-                <div class="skill-tags">
-                    <span class="skill-tag"> Django</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">MySQL Database</span>
-                    <span class="skill-tag">Git</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-c4014be1-e519-49c3-8db8-741c089dc341.jpg" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 2 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://eu-images.contentstack.com/v3/assets/blt69509c9116440be8/blt8ffb90a2f64bacfa/6776f4544b281ca5e2bc465a/cybersecurity_NicoElNino-AlamyStockPhoto.jpg?disable=upscale&width=1200&height=630&fit=crop" alt="Certification 2">
-                </div>
-                <h3>Cyber Job Simulation</h3>
-                <p>By Deloitte</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Data Analysis</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Cybersecurity</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_zEc27JBckZjeLT7oE_1750849134410_completion_certificate.pdf" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 3 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Certification 3">
-                </div>
-                <h3>Carrier Essention in Cybersecurity</h3>
-                <p>By Microsoft</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Cloud</span>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 4 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://www.infoworld.com/wp-content/uploads/2024/06/5_microsoft-azure-100733132-orig.jpg?quality=50&strip=all" alt="Certification 4">
-                </div>
-                <h3>Design Cloud Solution for the public sector</h3>
-                <p>By Microsoft</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Cloud</span>
-                    <span class="skill-tag">AI</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Data</span>
-                    <span class="skill-tag">AI in Azure</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-6e5gB3l21ygDn1yujDgw-mhN2EU61Acc" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 5 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Certification 5">
-                </div>
-                <h3>Advanced HTML</h3>
-                <p>By Infosys</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-6e5gB3l21ygDn1yujDgw-mhN2EU61Acc" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 6 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Certification 6">
-                </div>
-                <h3>Intership - Core And Advanced JAVA</h3>
-                <p>At Ypsilon IT solutions I did a one month Internship</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">JAVA</span>
-                    <span class="skill-tag">J2EE</span>
-                    <span class="skill-tag">DSA</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.linkedin.com/posts/karanxprajapatix1_advjava-internship-sait-activity-7399177875394048000-xEGs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-6e5gB3l21ygDn1yujDgw-mhN2EU61Acc" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 7 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Certification 7">
-                </div>
-                <h3>Deep Learning</h3>
-                <p>At NPTEL I completed 12 weeks module.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">Machine Learning</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.linkedin.com/posts/karanxprajapatix1_iit-ropar-certificate-activity-7397289941921095681-xTfG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-6e5gB3l21ygDn1yujDgw-mhN2EU61Acc" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 8 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg"
-                        alt="Certification 8">
-                </div>
-                <h3> AI internship with TechSaksham</h3>
-                <p>At TechSaksham I did a 2 month Internship</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Blockchain</span>
-                    <span class="skill-tag">Solidity</span> 
-                    <span class="skill-tag">Python</span> 
-                    <span class="skill-tag">Machine Learning</span> 
-                </div>
-                <div class="project-links">
-                    <a href="https://www.linkedin.com/posts/karanxprajapatix1_certificate-of-internship-activity-7316116987288424448-0_4a?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-6e5gB3l21ygDn1yujDgw-mhN2EU61Acc"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-
-            <!-- Certification 9 -->
-            <div class="info-block">
-                <div class="block-image">
-                    <img src="https://www.shutterstock.com/image-illustration/coming-soon-black-color-background-600nw-2659927991.jpg" alt="Certification 9">
-                </div>
-                <h3>Coming Soon</h3>
-                <p>Mobile App Developer</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Mobile</span>
-                    <span class="skill-tag">Flutter</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/funny-knock-knock-joke-knock-knock-whos-there-sorry-sorry-who-sorry-wrong-door-dogboo.jpg" class="project-link"><i class="fas fa-certificate"></i> View Credential</a>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-<section id="contact" style="padding-top: 120px;">
-        <div class="contact-container">
-            <div class="contact-content">
-                <h2 class="section-title"><span>Let's Connect</span></h2>
-                <div class="contact-form-container">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Karan Prajapati" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone No.</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
-                            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card reveal fade-up" data-delay="100">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg" alt="School Management">
+                        <div class="project-overlay">
+                            <a href="https://github.com/KaranXNandkishore01/MasterMindSchool.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
                         </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>School Management System</h3>
+                        <p>A comprehensive school management and automation platform tailored for Master Mind School.</p>
+                        <div class="skill-tags mt-2">
+                            <span>Web Dev</span><span>Management</span>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="form-row">
+                <!-- Project 2 -->
+                <div class="project-card glass-card reveal fade-up" data-delay="200">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Sai Construction">
+                        <div class="project-overlay">
+                            <a href="https://github.com/KaranXNandkishore01/SaiConstruction_Site.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Business Website</h3>
+                        <p>A professional, fully responsive business website developed for Sai Construction.</p>
+                        <div class="skill-tags mt-2">
+                            <span>Django</span><span>SQLite</span><span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card reveal fade-up" data-delay="300">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg" alt="HireXHub">
+                        <div class="project-overlay">
+                            <a href="https://github.com/KaranXNandkishore01/HireXHub.com.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>HireXHub</h3>
+                        <p>An AI-powered platform designed for a seamless connection between jobseekers and hirers.</p>
+                        <div class="skill-tags mt-2">
+                            <span>Django</span><span>AI Models</span><span>WebGL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="section-header reveal fade-up">
+                <h2 class="section-title">My <span class="text-gradient">Certifications</span></h2>
+                <div class="title-line"></div>
+            </div>
+
+            <!-- CSS Scroll Snap Container for mobile-friendly swiping -->
+            <div class="certifications-scroll-container">
+                <div class="certifications-slider">
+                    
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="100">
+                        <div class="cert-img"><img src="https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg" alt="Python Full Stack"></div>
+                        <div class="cert-content">
+                            <h4>Python Full Stack Web Dev</h4>
+                            <p class="issuer">Udemy</p>
+                            <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-c4014be1-e519-49c3-8db8-741c089dc341.jpg" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="150">
+                        <div class="cert-img"><img src="https://eu-images.contentstack.com/v3/assets/blt69509c9116440be8/blt8ffb90a2f64bacfa/6776f4544b281ca5e2bc465a/cybersecurity_NicoElNino-AlamyStockPhoto.jpg?disable=upscale&width=1200&height=630&fit=crop" alt="Cyber Job Simulation"></div>
+                        <div class="cert-content">
+                            <h4>Cyber Job Simulation</h4>
+                            <p class="issuer">Deloitte</p>
+                            <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_zEc27JBckZjeLT7oE_1750849134410_completion_certificate.pdf" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="200">
+                        <div class="cert-img"><img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Carrier Essention"></div>
+                        <div class="cert-content">
+                            <h4>Carrier Essention in Cybersecurity</h4>
+                            <p class="issuer">Microsoft</p>
+                            <a href="#" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="250">
+                        <div class="cert-img"><img src="https://www.infoworld.com/wp-content/uploads/2024/06/5_microsoft-azure-100733132-orig.jpg?quality=50&strip=all" alt="Cloud Solution"></div>
+                        <div class="cert-content">
+                            <h4>Design Cloud Solution</h4>
+                            <p class="issuer">Microsoft</p>
+                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="300">
+                        <div class="cert-img"><img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1332&auto=format&fit=crop" alt="Advanced HTML"></div>
+                        <div class="cert-content">
+                            <h4>Advanced HTML</h4>
+                            <p class="issuer">Infosys</p>
+                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 6 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="350">
+                        <div class="cert-img"><img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="JAVA"></div>
+                        <div class="cert-content">
+                            <h4>Core & Advanced JAVA</h4>
+                            <p class="issuer">Ypsilon IT Solutions</p>
+                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_advjava-internship-sait-activity-7399177875394048000-xEGs" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 7 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="400">
+                        <div class="cert-img"><img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Deep Learning"></div>
+                        <div class="cert-content">
+                            <h4>Deep Learning (12 weeks)</h4>
+                            <p class="issuer">NPTEL</p>
+                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_iit-ropar-certificate-activity-7397289941921095681-xTfG" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Cert 8 -->
+                    <div class="cert-card glass-card reveal fade-up" data-delay="450">
+                        <div class="cert-img"><img src="https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg" alt="TechSaksham"></div>
+                        <div class="cert-content">
+                            <h4>AI Internship (2 Months)</h4>
+                            <p class="issuer">TechSaksham</p>
+                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_certificate-of-internship-activity-7316116987288424448-0_4a" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="swipe-hint">
+                <i class="fas fa-arrows-alt-h"></i> Swipe to see more
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-wrapper reveal fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                    <p class="contact-subtitle">I'm open to internships, part-time opportunities, and freelance collaborations.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info glass-card">
+                        <h3>Reach Out</h3>
+                        <p>If you have a project or idea that needs AI expertise, let's talk and build something great together.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/KaranXNandkishore01" class="social-btn" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/karanPr38567441" class="social-btn" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:karanpraja6@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container glass-card">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" placeholder="+1 234 567 8900" required>
+                                </div>
+                            </div>
+                            
                             <div class="form-group">
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                <input type="text" id="subject" placeholder="Project Inquiry" required>
                             </div>
+
                             <div class="form-group">
-                                <label for="status">Current Status</label>
-                                <select id="status" name="status" required>
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="Available">Student</option>
-                                    <option value="Busy">Engineer</option>
-                                    <option value="Add fold below banner">Recuiter</option>
-                                    <option value="Other">Other</option>
-                                </select>
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="Tell me about your idea..." required></textarea>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your Idea/project..."
-                                required></textarea>
-                        </div>
-
-                        <div class="form-btn-container">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-                <p>I'm currently open to internships and part-time opportunities and freelance collaborations. If you have a project or idea
-                    that needs AI expertise, let's talk. <br>
-                </p>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/KaranXNandkishore01" class="social-btn"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://x.com/karanPr38567441" class="social-btn"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:karanpraja6@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                            <button type="submit" class="btn btn-primary w-100">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
 
-    <footer id="footer-section">
+    <footer id="footer-section" class="footer">
         <div class="footer-container">
             <div class="footer-info">
-                <h3>Karan Prajapati</h3>
+                <h3>Karan <span class="text-gradient">Prajapati.</span></h3>
                 <p>AI/ML Engineer & Generative AI Expert</p>
-                <p><i class="fas fa-map-marker-alt" style="color: #34d399;"></i> Indore, India</p>
-                <p><i class="fas fa-envelope" style="color: #7dd3fc;"></i> <a href="mailto:karanpraja6@gmail.com">karanpraja6@gmail.com</a></p>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/KaranXNandkishore01" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-btn" title="Naukri"><i class="fas fa-briefcase"></i></a>
+                <div class="footer-details">
+                    <span><i class="fas fa-map-marker-alt"></i> Indore, India</span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:karanpraja6@gmail.com">karanpraja6@gmail.com</a></span>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; Built and Designed by <a href="https://sites.google.com/view/thevisarggalaxy/home">TheVisargGalaxy</a></p>
+            <p>&copy; 2026 Built by <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="text-gradient">TheVisargGalaxy</a>. Handcrafted with <i class="fas fa-heart text-gradient"></i>.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
-
 </html>
-
-
-
