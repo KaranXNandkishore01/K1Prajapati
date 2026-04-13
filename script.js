@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, activeNavOptions);
 
+    sections.forEach(section => activeNavObserver.observe(section));
+
     /* =========================================================================
        5. CONTACT FORM & POPUP LOGIC
        ========================================================================= */
