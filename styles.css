@@ -51,6 +51,40 @@ body {
     overscroll-behavior-y: none;
 }
 
+/* Base Gradient Mesh */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(158, 27, 34, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 90% 90%, rgba(245, 222, 179, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(230, 57, 70, 0.08) 0%, transparent 50%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Premium Perspective Grid Background */
+body::after {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background-image: 
+        linear-gradient(rgba(245, 222, 179, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245, 222, 179, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -3;
+    pointer-events: none;
+    transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+    animation: gridMove 20s linear infinite;
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
+}
+
+@keyframes gridMove {
+    0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
+    100% { transform: perspective(500px) rotateX(60deg) translateY(60px) translateZ(-200px); }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
@@ -73,44 +107,45 @@ ul {
 .ambient-glow {
     position: fixed;
     border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.18;
+    filter: blur(140px);
+    opacity: 0.25;
     z-index: -1;
     pointer-events: none;
-    animation: pulse 12s ease-in-out infinite alternate;
+    animation: floatOrb 15s ease-in-out infinite alternate;
 }
 
 .glow-1 {
-    width: 60vw;
-    height: 60vw;
-    background: var(--accent-darkred);
-    top: -20%;
-    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: var(--accent-red);
+    top: -10%;
+    left: -20%;
 }
 
 .glow-2 {
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    height: 40vw;
     background: var(--accent-wheat);
-    bottom: -10%;
+    bottom: -15%;
     right: -10%;
-    animation-delay: -6s;
-    opacity: 0.1; /* Keep wheat subtle */
+    animation-delay: -7s;
+    opacity: 0.15; /* Subtle wheat glow */
 }
 
 .glow-3 {
-    width: 40vw;
-    height: 40vw;
-    background: var(--accent-red);
-    top: 40%;
-    left: 40%;
-    opacity: 0.12;
-    animation-duration: 18s;
+    width: 60vw;
+    height: 60vw;
+    background: var(--accent-darkred);
+    top: 30%;
+    left: 20%;
+    opacity: 0.2;
+    animation-duration: 25s;
 }
 
-@keyframes pulse {
-    0% { transform: scale(0.8) translate(0, 0); }
-    100% { transform: scale(1.2) translate(5%, 5%); }
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(0.8) rotate(0deg); opacity: 0.1; }
+    50% { opacity: 0.25; }
+    100% { transform: translate(10%, 15%) scale(1.3) rotate(15deg); opacity: 0.15; }
 }
 
 /* =========================================================================
