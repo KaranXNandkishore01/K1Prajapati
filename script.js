@@ -128,6 +128,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, activeNavOptions);
 
-    sections.forEach(section => activeNavObserver.observe(section));
+    /* =========================================================================
+       5. CONTACT FORM & POPUP LOGIC
+       ========================================================================= */
+    const contactForm = document.getElementById('contactForm');
+    const popupOverlay = document.getElementById('thank-you-popup');
+    const closePopupBtn = document.getElementById('close-popup-btn');
+
+    if (contactForm && popupOverlay) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default page reload
+            
+            // Note: Add your preferred email service API or backend fetch here
+            
+            // Show the popup Modal
+            popupOverlay.classList.remove('hidden');
+            contactForm.reset();
+        });
+
+        // Close popup when 'Acknowledge' button is clicked
+        closePopupBtn.addEventListener('click', () => {
+            popupOverlay.classList.add('hidden');
+        });
+
+        // Allow closing by clicking the blurred background layer outside the modal
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.add('hidden');
+            }
+        });
+    }
 
 });
