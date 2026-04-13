@@ -49,6 +49,7 @@ body {
     position: relative;
     /* Prevent overscroll bounce on mobile */
     overscroll-behavior-y: none;
+    overflow-wrap: break-word;
 }
 
 /* Base Gradient Mesh */
@@ -800,7 +801,7 @@ ul {
 .contact-subtitle {
     color: var(--text-secondary);
     font-size: 1.1rem;
-    margin-top: -3rem;
+    margin-top: 0.5rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -944,6 +945,16 @@ ul {
     
     .section {
         padding: 5rem 5%;
+    }
+    
+    /* Mobile text overflow prevention */
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding-bottom: 6rem;
     }
     
     /* Navigation Menu Mobile */
