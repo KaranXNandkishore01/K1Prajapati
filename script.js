@@ -10,7 +10,7 @@
  * Paste your Google Apps Script Web App URL between the quotes below:
  * Example: const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx.../exec";
  */
-const GOOGLE_SHEET_URL = "";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzrIgvrqazLkZXu2sfsCw8f6JStxDm-IbajTtCWhaNJC2MwIyBTiTPPT7wNxRhkzzL9/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -294,13 +294,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new FormData(contactForm);
+            const formParams = new URLSearchParams(formData);
 
             // If user has provided their Google Apps Script Web App URL
             if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.trim().startsWith('http')) {
                 try {
                     await fetch(GOOGLE_SHEET_URL, {
                         method: 'POST',
-                        body: formData,
+                        body: formParams,
                         mode: 'no-cors' // Allows sending cross-origin to Google Apps Script without CORS block
                     });
                     
