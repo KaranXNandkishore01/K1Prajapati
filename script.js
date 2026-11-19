@@ -5,6 +5,13 @@
  * =========================================================================
  */
 
+/**
+ * 📊 GOOGLE SHEETS INTEGRATION URL:
+ * Paste your Google Apps Script Web App URL between the quotes below:
+ * Example: const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx.../exec";
+ */
+const GOOGLE_SHEET_URL = "";
+
 document.addEventListener('DOMContentLoaded', () => {
 
     /* =========================================================================
@@ -267,19 +274,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =========================================================================
-       8. CONTACT FORM SUBMISSION & POPUP MODAL
+       8. CONTACT FORM SUBMISSION TO GOOGLE SHEETS & POPUP MODAL
        ========================================================================= */
     const contactForm = document.getElementById('contactForm');
     const popupOverlay = document.getElementById('thank-you-popup');
     const closePopupBtn = document.getElementById('close-popup-btn');
+    const submitBtn = document.getElementById('submit-btn');
 
     if (contactForm && popupOverlay) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Transmit Message <i class="fas fa-paper-plane"></i>';
             
-            // Show confirmation modal
-            popupOverlay.classList.remove('hidden');
-            contactForm.reset();
+            // Set loading state on button
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Storing In Sheet...';
+            }
+
+            const formData = new FormData(contactForm);
+
+            // If user has provided their Google Apps Script Web App URL
+            if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.trim().startsWith('http')) {
+                try {
+                    await fetch(GOOGLE_SHEET_URL, {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors' // Allows sending cross-origin to Google Apps Script without CORS block
+                    });
+                    
+                    // Show confirmation popup
+                    popupOverlay.classList.remove('hidden');
+                    contactForm.reset();
+                    showToast('Inquiry logged into Google Sheet!');
+                } catch (error) {
+                    console.error('Google Sheet transmission error:', error);
+                    // Still show popup to reassure visitor
+                    popupOverlay.classList.remove('hidden');
+                    contactForm.reset();
+                } finally {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+                }
+            } else {
+                // Default fallback if URL is not yet pasted
+                console.info('Tip: Add your Google Apps Script Web App URL in script.js (GOOGLE_SHEET_URL) to save entries to Google Sheets.');
+                
+                // Simulate brief network delay for elegant UX
+                setTimeout(() => {
+                    popupOverlay.classList.remove('hidden');
+                    contactForm.reset();
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+                }, 400);
+            }
         });
 
         if (closePopupBtn) {

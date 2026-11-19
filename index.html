@@ -802,25 +802,25 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" id="name" placeholder="Alex Morgan" required>
+                                    <input type="text" id="name" name="name" placeholder="Alex Morgan" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Your Email Address</label>
-                                    <input type="email" id="email" placeholder="alex@company.com" required>
+                                    <input type="email" id="email" name="email" placeholder="alex@company.com" required>
                                 </div>
                             </div>
                             
                             <div class="form-group">
                                 <label for="subject">Inquiry Subject</label>
-                                <input type="text" id="subject" placeholder="SDE Role / Full-Stack Project / ML Collaboration" required>
+                                <input type="text" id="subject" name="subject" placeholder="SDE Role / Full-Stack Project / ML Collaboration" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="message">Detailed Message</label>
-                                <textarea id="message" rows="4" placeholder="Describe the role requirements, project goals, or opportunity..." required></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Describe the role requirements, project goals, or opportunity..." required></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">
+                            <button type="submit" id="submit-btn" class="btn btn-primary w-100">
                                 Transmit Message <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
