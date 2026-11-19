@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Portfolio of Karan Prajapati, an AI/ML Engineer specializing in Deep Learning and Generative AI.">
+    <meta name="description" content="Portfolio of Karan Prajapati — Full-Stack Engineer, Java (DSA), and Machine Learning / GenAI Developer. B.Tech AI & ML student at Sri Aurobindo Institute of Technology, Indore.">
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <title>K.Prajapati | AI/ML Engineer</title>
+    <title>Karan Prajapati | Full-Stack Engineer & AI/ML Specialist</title>
     
-    <!-- Premium Fonts -->
+    <!-- Modern Typography: Plus Jakarta Sans, Outfit & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
+    <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!-- Ambient glowing backgrounds for performance -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-    <div class="ambient-glow glow-3"></div>
 
     <!-- Header Navigation -->
     <header class="navbar" id="navbar">
         <a href="#hero" class="logo">
-            <span class="logo-mark"><img src="logo.png" alt="K1 Logo" style="height: 40px; width: auto; display: block;"></span>
-            Prajapati.
+            <span class="logo-mark">
+                <img src="logo.png" alt="Karan Prajapati Logo">
+            </span>
+            <span>Karan <span class="logo-accent">Prajapati</span></span>
         </a>
-        <div class="menu-toggle" id="mobile-menu">
+        
+        <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </div>
+        
         <nav class="nav-container">
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about" class="nav-item">About</a></li>
                 <li><a href="#skills" class="nav-item">Skills</a></li>
                 <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#experience" class="nav-item">Experience</a></li>
                 <li><a href="#certifications" class="nav-item">Certifications</a></li>
                 <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
+            <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Let's Connect</a>
         </nav>
     </header>
 
@@ -49,335 +50,779 @@
         <section id="hero" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content reveal fade-up">
-                    <span class="badge">Hello, I'm</span>
-                    <h1 class="hero-title">Karan <span class="text-gradient">Prajapati.</span></h1>
-                    <h2 class="hero-subtitle">AI & ML Engineer</h2>
-                    <p class="hero-desc">Specializing in Deep Learning, Generative AI, and bridging the gap between heavy research models and real-world deployment.</p>
+                    <div class="hero-badge-wrap">
+                        <span class="badge">
+                            <span class="pulse-dot"></span> Associate Software Engineer @ Infotact Solutions
+                        </span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Karan <span class="text-gradient">Prajapati.</span>
+                    </h1>
+                    
+                    <h2 class="hero-subtitle">
+                        <i class="fas fa-terminal text-navy"></i> Full-Stack Engineer × GenAI Specialist
+                    </h2>
+                    
+                    <p class="hero-desc">
+                        <strong>I Build What AI Promises.</strong> Associate Software Engineer (Java Development) – L1 at <strong>Infotact Solutions</strong> (Bengaluru) & Co-Founder at <strong>The VisarG galaxy</strong>. Engineering enterprise Java backends, reactive MERN web applications, and production-ready NLP/GenAI systems.
+                    </p>
                     
                     <div class="cta-group">
-                        <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                        <a href="#projects" class="btn btn-primary">
+                            Featured Projects <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#experience" class="btn btn-secondary">
+                            Work Experience
+                        </a>
+                    </div>
+
+                    <!-- Quick Metrics Banner (from LinkedIn & Resume) -->
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">Infotact</span>
+                            <span class="metric-label">Software Engineer L1</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">Co-Founder</span>
+                            <span class="metric-label">The VisarG galaxy</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">7.6</span>
+                            <span class="metric-label">CGPA (B.Tech AI/ML)</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">OCI '25</span>
+                            <span class="metric-label">Certified AI Associate</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="hero-visual reveal fade-left" data-delay="200">
-                    <div class="hero-image-wrapper glass-card">
-                        <img src="k2img.png" alt="Karan Prajapati" class="hero-img">
-                        <div class="orbital orbital-1"></div>
-                        <div class="orbital orbital-2"></div>
+                <div class="hero-visual reveal fade-left" data-delay="150">
+                    <div class="hero-frame">
+                        <div class="orbital-ring orbital-1"></div>
+                        <div class="orbital-ring orbital-2"></div>
+                        
+                        <div class="hero-image-wrapper">
+                            <img src="k2img.png" alt="Karan Prajapati" class="hero-img">
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="hero-floating-card floating-top-right">
+                            <div class="floating-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-text">
+                                <h5>MERN + GenAI</h5>
+                                <p>React 19, Node.js & Google GenAI</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-floating-card floating-bottom-left">
+                            <div class="floating-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="floating-text">
+                                <h5>Java (DSA)</h5>
+                                <p>Trees, Graphs, DP & Recursion</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="scroll-indicator">
                 <div class="mouse"></div>
-                <span>Scroll</span>
+                <span>Scroll to explore</span>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Dynamic Tech Ticker Marquee -->
+        <section class="ticker-section" aria-label="Technology Ticker">
+            <div class="ticker-track">
+                <div class="ticker-item"><i class="fab fa-java"></i> Java (DSA)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-react"></i> React 19 (Vite)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js & Express</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-database"></i> MongoDB & SQLite</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-robot"></i> Google GenAI & LLMs</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-python"></i> Python & Django</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-cloud"></i> Oracle Cloud (OCI)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-css3-alt"></i> Tailwind CSS</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-network-wired"></i> NLP & scikit-learn</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-git-alt"></i> Git & Postman</div>
+                <div class="ticker-dot"></div>
+                <!-- Duplicate for seamless infinite loop -->
+                <div class="ticker-item"><i class="fab fa-java"></i> Java (DSA)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-react"></i> React 19 (Vite)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-node-js"></i> Node.js & Express</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-database"></i> MongoDB & SQLite</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-robot"></i> Google GenAI & LLMs</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-python"></i> Python & Django</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-cloud"></i> Oracle Cloud (OCI)</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-css3-alt"></i> Tailwind CSS</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fas fa-network-wired"></i> NLP & scikit-learn</div>
+                <div class="ticker-dot"></div>
+                <div class="ticker-item"><i class="fab fa-git-alt"></i> Git & Postman</div>
+                <div class="ticker-dot"></div>
+            </div>
+        </section>
+
+        <!-- About Section (Bento Grid) -->
         <section id="about" class="section">
             <div class="section-header reveal fade-up">
-                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                <span class="section-tag">Profile Overview</span>
+                <h2 class="section-title">Professional <span class="text-gradient">Summary</span></h2>
+                <p class="section-subtitle">Bridging algorithmic foundations with real-world MERN architectures and machine intelligence.</p>
                 <div class="title-line"></div>
             </div>
             
-            <div class="about-grid">
-                <!-- Background & Experience -->
-                <div class="glass-card reveal fade-up" data-delay="100">
-                    <div class="card-icon"><i class="fas fa-terminal"></i></div>
-                    <h3>Background</h3>
-                    <p>I am a passionate engineer with a deep focus on algorithmic problem solving. My journey started with Web development and evolved into mastering neural networks, Deep Learning, and Machine Learning.</p>
-                    
-                    <h3 class="mt-4">Experience</h3>
-                    <ul class="experience-list">
-                        <li><strong>Project Lead</strong> for institution initiatives.</li>
-                        <li><strong>Co-founder & Graphic Designer</strong> at <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="text-gradient">TheVisargGalaxy</a>.</li>
-                    </ul>
+            <div class="about-bento-grid">
+                <!-- Professional Summary Bio -->
+                <div class="card-modern bento-card bento-bio reveal fade-up" data-delay="100">
+                    <div class="card-icon-modern"><i class="fas fa-terminal"></i></div>
+                    <h3>About Me & Vision</h3>
+                    <p>
+                        I am an <strong>Associate Software Engineer (Java Development) – L1 at Infotact Solutions</strong> in Bengaluru and <strong>Co-Founder at The VisarG galaxy</strong>, currently completing my Bachelor's degree in Artificial Intelligence & Machine Learning at Sri Aurobindo Institute of Technology, Indore.
+                    </p>
+                    <p style="margin-top: 0.85rem;">
+                        Driven by the conviction to <em>"Build What AI Promises"</em>, I engineer end-to-end software solutions: enterprise Java backends with robust algorithmic problem solving (DSA), modern reactive <strong>MERN-stack applications</strong>, and cutting-edge <strong>Generative AI & NLP systems</strong>. I approach every challenge with precision, dedication, and a commitment to delivering scalable, high-impact results.
+                    </p>
+                    <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="highlight-badge">Infotact Solutions (Java Dev L1)</span>
+                        <span class="highlight-badge">Co-Founder (The VisarG galaxy)</span>
+                        <span class="highlight-badge">Full-Stack (MERN)</span>
+                        <span class="highlight-badge">Java (DSA)</span>
+                        <span class="highlight-badge">GenAI & Prompt Engineering</span>
+                    </div>
                 </div>
                 
-                <!-- Education -->
-                <div class="glass-card reveal fade-up" data-delay="200">
-                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                <!-- Education Timeline -->
+                <div class="card-modern bento-card bento-stats reveal fade-up" data-delay="150">
+                    <div class="card-icon-modern"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Education</h3>
-                    <div class="edu-item">
-                        <h4>RGPV University, Bhopal</h4>
-                        <p>B.Tech in CSE (AI & ML) <br><span class="highlight">Year 3, Sem 5 | Grade: A</span></p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>MP Board of Secondary Education</h4>
-                        <p>12th Class <br><span class="highlight">90.6%</span></p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>MP Board of Secondary Education</h4>
-                        <p>10th Class <br><span class="highlight">94.8%</span></p>
+                    <div class="edu-timeline">
+                        <div class="edu-item">
+                            <h4>Sri Aurobindo Institute of Technology, Indore</h4>
+                            <p>B.Tech, Artificial Intelligence and Machine Learning <br>
+                               <span class="highlight-badge">Aug 2023 – Aug 2027 | CGPA: 7.6 / 10</span>
+                            </p>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Master Mind Public Hr. Sec. School, Pipariya</h4>
+                            <p>Class XII (Mathematics & Science) — MP Board | 2022 <br>
+                               <span class="highlight-badge">Distinction: 90.6%</span>
+                            </p>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Master Mind Public Hr. Sec. School, Pipariya</h4>
+                            <p>Class X (Science & Mathematics) — MP Board | 2020 <br>
+                               <span class="highlight-badge">Distinction: 94.8%</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Exploration & Interests -->
-                <div class="glass-card reveal fade-up" data-delay="300">
-                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Exploration</h3>
-                    <p>Currently exploring Large Language Models (LLMs) and edge deployment. I aim to bridge heavy research models and consumer devices. I feel like a traveller in this field, continuously exploring AI and ML.</p>
-                    
-                    <h3 class="mt-4">Interests</h3>
-                    <p>I love to read books and play piano in my free time.</p>
+                <!-- Core DSA & Algorithmic Foundations -->
+                <div class="card-modern bento-card bento-edu reveal fade-up" data-delay="200">
+                    <div class="card-icon-modern"><i class="fas fa-code"></i></div>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Rigorous Java-based problem solving across foundational and advanced computer science data structures:</p>
+                    <div class="skill-tags" style="margin-top: 1rem;">
+                        <span>Arrays</span>
+                        <span>Strings</span>
+                        <span>Linked Lists</span>
+                        <span>Stacks & Queues</span>
+                        <span>Trees & Binary Trees</span>
+                        <span>Graphs & BFS/DFS</span>
+                        <span>Hashing & HashMaps</span>
+                        <span>Recursion & Backtracking</span>
+                        <span>Dynamic Programming</span>
+                        <span>Sorting & Searching</span>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                        Focused on writing optimized time and space complexity solutions in Java.
+                    </p>
+                </div>
+
+                <!-- Full-Stack & GenAI Focus -->
+                <div class="card-modern bento-card bento-experience reveal fade-up" data-delay="250">
+                    <div class="card-icon-modern"><i class="fas fa-cubes"></i></div>
+                    <h3>Modern Tech Stack</h3>
+                    <p>
+                        <strong>Full-Stack Architecture:</strong> React 19 (Vite), Node.js, Express.js, MongoDB, Django, Tailwind CSS, Bootstrap 5, RESTful APIs, SQLite.
+                    </p>
+                    <p style="margin-top: 0.75rem;">
+                        <strong>Machine Learning & GenAI:</strong> Google GenAI, NLP (natural library), LLMs, prompt engineering, text classification and ranking, scikit-learn, pandas, NumPy.
+                    </p>
+                    <p style="margin-top: 0.75rem;">
+                        <strong>Cloud & Infrastructure:</strong> Oracle Cloud Infrastructure (OCI), Git/GitHub, Postman, VS Code.
+                    </p>
+                </div>
+
+                <!-- Developer Profiles & Repositories -->
+                <div class="card-modern bento-card bento-interests reveal fade-up" data-delay="300">
+                    <div class="card-icon-modern"><i class="fas fa-globe"></i></div>
+                    <h3>Developer Profiles & Networks</h3>
+                    <p>Explore my problem solving, code contributions, writings, and community engagements:</p>
+                    <div class="interests-grid">
+                        <a href="https://github.com/KaranXNandkishore01" target="_blank" class="interest-chip">
+                            <i class="fab fa-github text-navy"></i> GitHub (@KaranXNandkishore01)
+                        </a>
+                        <a href="https://www.linkedin.com/in/karanxprajapatix1/" target="_blank" class="interest-chip">
+                            <i class="fab fa-linkedin-in text-navy"></i> LinkedIn Profile
+                        </a>
+                        <a href="https://leetcode.com/" target="_blank" class="interest-chip">
+                            <i class="fas fa-terminal text-navy"></i> LeetCode Profile
+                        </a>
+                        <a href="https://karanx1.medium.com/" target="_blank" class="interest-chip">
+                            <i class="fab fa-medium-m text-navy"></i> Technical Blog (Medium)
+                        </a>
+                        <a href="https://developers.google.com/" target="_blank" class="interest-chip">
+                            <i class="fab fa-google text-navy"></i> Google Developer Profile
+                        </a>
+                        <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="interest-chip">
+                            <i class="fas fa-palette text-navy"></i> The VisarG Galaxy
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Technical Skills Section -->
         <section id="skills" class="section">
             <div class="section-header reveal fade-up">
-                <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
+                <span class="section-tag">Competencies</span>
+                <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+                <p class="section-subtitle">Categorized competencies spanning languages, algorithms, full-stack frameworks, ML/GenAI, and cloud.</p>
                 <div class="title-line"></div>
             </div>
 
+            <!-- Category Filter Tabs -->
+            <div class="skills-filter-nav reveal fade-up">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="languages">Languages</button>
+                <button class="filter-btn" data-filter="dsa">Java (DSA)</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack (MERN)</button>
+                <button class="filter-btn" data-filter="ml-genai">ML & GenAI</button>
+                <button class="filter-btn" data-filter="cloud-tools">Cloud & Tools</button>
+            </div>
+
             <div class="skills-grid">
-                <!-- Languages -->
-                <div class="glass-card skill-card reveal scale-in" data-delay="100">
+                <!-- 1. Languages -->
+                <div class="card-modern skill-card reveal scale-in" data-category="languages" data-delay="100">
                     <div class="skill-header">
-                        <i class="fab fa-python skill-icon"></i>
-                        <h3>Languages</h3>
+                        <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+                        <div>
+                            <h3>Languages</h3>
+                            <span class="highlight-badge">Core Syntax</span>
+                        </div>
                     </div>
-                    <p class="skill-desc">Python, C++, SQL, JavaScript</p>
+                    <p class="skill-desc">Languages used for algorithmic problem solving, web development, data querying, and scripting.</p>
                     <div class="skill-tags">
-                        <span>NumPy</span><span>Pandas</span><span>ES6</span>
+                        <span>Java</span><span>Python</span><span>JavaScript (ES6+)</span><span>SQL</span>
                     </div>
                 </div>
 
-                <!-- Machine Learning -->
-                <div class="glass-card skill-card reveal scale-in" data-delay="200">
+                <!-- 2. Data Structures & Algorithms -->
+                <div class="card-modern skill-card reveal scale-in" data-category="dsa" data-delay="150">
                     <div class="skill-header">
-                        <i class="fas fa-network-wired skill-icon"></i>
-                        <h3>Machine Learning</h3>
+                        <div class="skill-icon-wrap"><i class="fab fa-java"></i></div>
+                        <div>
+                            <h3>Data Structures & Algorithms</h3>
+                            <span class="highlight-badge">Java DSA</span>
+                        </div>
                     </div>
-                    <p class="skill-desc">TensorFlow, PyTorch, Scikit-learn</p>
+                    <p class="skill-desc">Efficient computational thinking, space/time complexity optimization, and problem solving patterns.</p>
                     <div class="skill-tags">
-                        <span>Regression</span><span>Clustering</span><span>XGBoost</span>
+                        <span>Arrays</span><span>Strings</span><span>Linked Lists</span><span>Stacks & Queues</span><span>Trees</span><span>Graphs</span><span>Hashing</span><span>Recursion</span><span>Dynamic Programming</span><span>Sorting & Searching</span>
                     </div>
                 </div>
 
-                <!-- Domains -->
-                <div class="glass-card skill-card reveal scale-in" data-delay="300">
-                    <div class="skill-header">
-                        <i class="fas fa-eye skill-icon"></i>
-                        <h3>Domains</h3>
+                <!-- 3. Full-Stack Web Development -->
+                <div class="card-modern skill-card reveal scale-in" data-category="fullstack" data-delay="200">
+                    <div class="card-icon-modern skill-icon-wrap"><i class="fab fa-react"></i></div>
+                    <div>
+                        <h3>Full-Stack Engineering</h3>
+                        <span class="highlight-badge">MERN & Django</span>
                     </div>
-                    <p class="skill-desc">Computer Vision & NLP</p>
+                    <p class="skill-desc">Developing responsive, secure, and reactive web applications from user interfaces to database schemas.</p>
                     <div class="skill-tags">
-                        <span>OpenCV</span><span>Transformers</span><span>YOLO</span><span>BERT</span>
+                        <span>MongoDB</span><span>Express.js</span><span>React 19 (Vite)</span><span>Node.js</span><span>MERN Stack</span><span>Django</span><span>Tailwind CSS</span><span>Bootstrap 5</span><span>REST APIs</span><span>SQLite</span>
+                    </div>
+                </div>
+
+                <!-- 4. Machine Learning & GenAI -->
+                <div class="card-modern skill-card reveal scale-in" data-category="ml-genai" data-delay="250">
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3>Machine Learning & GenAI</h3>
+                            <span class="highlight-badge">AI Systems</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Designing NLP pipelines, leveraging modern LLMs with prompt engineering, and building ranking algorithms.</p>
+                    <div class="skill-tags">
+                        <span>NLP</span><span>LLMs</span><span>Prompt Engineering</span><span>Google GenAI</span><span>Text Classification</span><span>Candidate Ranking</span><span>scikit-learn</span><span>pandas</span><span>NumPy</span>
+                    </div>
+                </div>
+
+                <!-- 5. Cloud & Developer Tools -->
+                <div class="card-modern skill-card reveal scale-in" data-category="cloud-tools" data-delay="300">
+                    <div class="skill-header">
+                        <div class="skill-icon-wrap"><i class="fas fa-cloud"></i></div>
+                        <div>
+                            <h3>Cloud & Dev Tools</h3>
+                            <span class="highlight-badge">Infrastructure</span>
+                        </div>
+                    </div>
+                    <p class="skill-desc">Modern developer environments, cloud infrastructure, API testing, and version control workflows.</p>
+                    <div class="skill-tags">
+                        <span>Oracle Cloud Infrastructure (OCI)</span><span>Git & GitHub</span><span>Postman</span><span>VS Code</span><span>bcrypt Authentication</span><span>Recharts</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Featured Projects Section (from Resume) -->
         <section id="projects" class="section">
             <div class="section-header reveal fade-up">
-                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">End-to-End <span class="text-gradient">Projects</span></h2>
+                <p class="section-subtitle">Production-ready applications featuring full-stack architectures, GenAI, and machine learning pipelines.</p>
                 <div class="title-line"></div>
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card glass-card reveal fade-up" data-delay="100">
+                <!-- Project 1: Edulense -->
+                <div class="project-card reveal fade-up" data-delay="100">
                     <div class="project-img-wrapper">
-                        <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg" alt="School Management">
+                        <span class="project-badge-overlay"><i class="fas fa-graduation-cap"></i> MERN + GenAI</span>
+                        <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg" alt="Edulense AI-Powered Learning Platform">
                         <div class="project-overlay">
-                            <a href="https://github.com/KaranXNandkishore01/MasterMindSchool.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/KaranXNandkishore01" target="_blank" class="action-btn">
+                                <i class="fab fa-github"></i> Inspect Code
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>School Management System</h3>
-                        <p>A comprehensive school management and automation platform tailored for Master Mind School.</p>
-                        <div class="skill-tags mt-2">
-                            <span>Web Dev</span><span>Management</span>
+                        <h3>Edulense: AI-Powered Learning Platform</h3>
+                        <p>
+                            A comprehensive full-stack app for learning the Constitution of India. Built with <strong>React 19 (Vite) + Tailwind CSS</strong> on the frontend and <strong>Node.js/Express + MongoDB</strong> on the backend. Integrated <strong>Google GenAI and NLP (natural library)</strong> for intelligent, context-aware quizzes and personalized learning feedback. Includes progress tracking with Recharts, text highlighting, rich-text notes (React Quill), and secure bcrypt authentication.
+                        </p>
+                        <div class="skill-tags">
+                            <span>React 19</span><span>Tailwind CSS</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Google GenAI</span><span>NLP</span><span>Recharts</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/KaranXNandkishore01" target="_blank" class="project-code-link">
+                                GitHub Repository <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card glass-card reveal fade-up" data-delay="200">
+                <!-- Project 2: HireXHub -->
+                <div class="project-card reveal fade-up" data-delay="150">
                     <div class="project-img-wrapper">
-                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" alt="Sai Construction">
+                        <span class="project-badge-overlay"><i class="fas fa-briefcase"></i> Django + ML</span>
+                        <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg" alt="HireXHub Intelligent Recruitment Platform">
                         <div class="project-overlay">
-                            <a href="https://github.com/KaranXNandkishore01/SaiConstruction_Site.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/KaranXNandkishore01/HireXHub.com.git" target="_blank" class="action-btn">
+                                <i class="fab fa-github"></i> Inspect Code
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Business Website</h3>
-                        <p>A professional, fully responsive business website developed for Sai Construction.</p>
-                        <div class="skill-tags mt-2">
-                            <span>Django</span><span>SQLite</span><span>HTML/CSS</span>
+                        <h3>HireXHub: Intelligent Recruitment & Job Portal</h3>
+                        <p>
+                            Collaborated in a team of 3 to develop role-based dashboards for applicants and recruiters with secure authentication and real-time application tracking. Implemented skill- and experience-based job matching and an <strong>AI resume scorer</strong> rating candidate resumes against target job roles. Built responsive Bootstrap 5 UI on Django and SQLite with 25+ git commits.
+                        </p>
+                        <div class="skill-tags">
+                            <span>Python</span><span>Django</span><span>AI Resume Scorer</span><span>Bootstrap 5</span><span>SQLite</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/KaranXNandkishore01/HireXHub.com.git" target="_blank" class="project-code-link">
+                                GitHub Repository <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card glass-card reveal fade-up" data-delay="300">
+                <!-- Project 3: AI-Powered Resume Screening and Ranking System -->
+                <div class="project-card reveal fade-up" data-delay="200">
                     <div class="project-img-wrapper">
-                        <img src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg" alt="HireXHub">
+                        <span class="project-badge-overlay"><i class="fas fa-robot"></i> NLP / ML Pipeline</span>
+                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="AI-Powered Resume Screening and Ranking System">
                         <div class="project-overlay">
-                            <a href="https://github.com/KaranXNandkishore01/HireXHub.com.git" target="_blank" class="action-btn"><i class="fab fa-github"></i> View Code</a>
+                            <a href="https://github.com/KaranXNandkishore01" target="_blank" class="action-btn">
+                                <i class="fab fa-github"></i> Inspect Code
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>HireXHub</h3>
-                        <p>An AI-powered platform designed for a seamless connection between jobseekers and hirers.</p>
-                        <div class="skill-tags mt-2">
-                            <span>Django</span><span>AI Models</span><span>WebGL</span>
+                        <h3>AI-Powered Resume Screening & Ranking System</h3>
+                        <p>
+                            Built during an internship at <strong>Edunet Foundation (Jan 2025 – Apr 2025)</strong>. Led the project as Project Manager Intern, planning milestones and tracking delivery over 4 months. Engineered an end-to-end NLP/ML pipeline that parses resumes, extracts candidate skills and experience, and ranks candidate profiles against job descriptions.
+                        </p>
+                        <div class="skill-tags">
+                            <span>NLP Pipeline</span><span>Text Extraction</span><span>scikit-learn</span><span>Candidate Ranking</span><span>Python</span><span>Project Management</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/KaranXNandkishore01" target="_blank" class="project-code-link">
+                                View Project Details <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="section">
+        <!-- Professional Experience Section (from Resume) -->
+        <section id="experience" class="section">
             <div class="section-header reveal fade-up">
-                <h2 class="section-title">My <span class="text-gradient">Certifications</span></h2>
+                <span class="section-tag">Career History</span>
+                <h2 class="section-title">Work <span class="text-gradient">Experience</span></h2>
+                <p class="section-subtitle">Leadership, startup co-founding, and student outreach engagements.</p>
                 <div class="title-line"></div>
             </div>
 
-            <!-- CSS Scroll Snap Container for mobile-friendly swiping -->
-            <div class="certifications-scroll-container">
-                <div class="certifications-slider">
-                    
-                    <!-- Cert 1 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="100">
-                        <div class="cert-img"><img src="https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg" alt="Python Full Stack"></div>
-                        <div class="cert-content">
-                            <h4>Python Full Stack Web Dev</h4>
-                            <p class="issuer">Udemy</p>
-                            <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-c4014be1-e519-49c3-8db8-741c089dc341.jpg" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
+            <div class="about-bento-grid">
+                <!-- Experience 1: Infotact Solutions (Current Role) -->
+                <div class="card-modern bento-card bento-interests reveal fade-up" data-delay="100">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; gap: 1.15rem; align-items: center;">
+                            <div class="card-icon-modern" style="margin-bottom: 0;"><i class="fas fa-building text-navy"></i></div>
+                            <div>
+                                <h3 style="margin-bottom: 0.25rem;">Associate Software Engineer (Java Development) – L1</h3>
+                                <h4 style="font-size: 1.05rem; color: var(--navy-royal); font-weight: 600;">Infotact Solutions</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                            <span class="badge"><span class="pulse-dot"></span> Current Role</span>
+                            <span class="highlight-badge">Nov 2026 – Present</span>
+                            <span class="highlight-badge"><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</span>
                         </div>
                     </div>
+                    <p style="margin-top: 1.25rem;">
+                        Engineering core Java backend architectures, enterprise software modules, and scalable application logic. Focusing on performance optimization, object-oriented design patterns, algorithmic data structures, and production-grade reliability.
+                    </p>
+                    <div class="skill-tags" style="margin-top: 1rem;">
+                        <span>Java Development</span><span>Backend Engineering</span><span>Data Structures & OOP</span><span>Enterprise Solutions</span><span>Bengaluru</span>
+                    </div>
+                </div>
 
-                    <!-- Cert 2 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="150">
-                        <div class="cert-img"><img src="https://eu-images.contentstack.com/v3/assets/blt69509c9116440be8/blt8ffb90a2f64bacfa/6776f4544b281ca5e2bc465a/cybersecurity_NicoElNino-AlamyStockPhoto.jpg?disable=upscale&width=1200&height=630&fit=crop" alt="Cyber Job Simulation"></div>
-                        <div class="cert-content">
-                            <h4>Cyber Job Simulation</h4>
-                            <p class="issuer">Deloitte</p>
-                            <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_zEc27JBckZjeLT7oE_1750849134410_completion_certificate.pdf" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
+                <!-- Experience 2: The VisarG galaxy (Current Venture) -->
+                <div class="card-modern bento-card bento-half reveal fade-up" data-delay="150">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                        <div class="card-icon-modern"><i class="fas fa-rocket"></i></div>
+                        <span class="badge" style="font-size: 0.75rem;"><span class="pulse-dot"></span> Co-Founder</span>
                     </div>
+                    <h3>Co-Founder & Manager</h3>
+                    <div class="highlight-badge" style="margin-bottom: 0.85rem;">The VisarG galaxy | May 2025 – Present | India</div>
+                    <p>
+                        Co-founded a creative graphic design company. Directing daily business operations, client communication, cross-functional team coordination, and on-time project execution.
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="exp-link">
+                            Visit The VisarG galaxy <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
 
-                    <!-- Cert 3 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="200">
-                        <div class="cert-img"><img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Carrier Essention"></div>
-                        <div class="cert-content">
-                            <h4>Carrier Essention in Cybersecurity</h4>
-                            <p class="issuer">Microsoft</p>
-                            <a href="#" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
+                <!-- Experience 3: Edunet Foundation -->
+                <div class="card-modern bento-card bento-half reveal fade-up" data-delay="200">
+                    <div class="card-icon-modern"><i class="fas fa-tasks"></i></div>
+                    <h3>Project Manager Internship</h3>
+                    <div class="highlight-badge" style="margin-bottom: 0.85rem;">Edunet Foundation | Jan 2025 – Apr 2025 | Indore, MP</div>
+                    <p>
+                        Led the AI-Powered Resume Screening and Ranking System: scheduled project milestones, divided modular development sprints, and tracked delivery of the NLP parsing and ranking engine over 4 months.
+                    </p>
+                </div>
 
-                    <!-- Cert 4 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="250">
-                        <div class="cert-img"><img src="https://www.infoworld.com/wp-content/uploads/2024/06/5_microsoft-azure-100733132-orig.jpg?quality=50&strip=all" alt="Cloud Solution"></div>
-                        <div class="cert-content">
-                            <h4>Design Cloud Solution</h4>
-                            <p class="issuer">Microsoft</p>
-                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
+                <!-- Experience 4: LetsUpgrade -->
+                <div class="card-modern bento-card bento-half reveal fade-up" data-delay="250">
+                    <div class="card-icon-modern"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Student Ambassador</h3>
+                    <div class="highlight-badge" style="margin-bottom: 0.85rem;">LetsUpgrade | Mar 2025 – May 2025 | Indore, MP</div>
+                    <p>
+                        Promoted technical skill-building programs and engaged student developers across college campuses to build capabilities in modern programming, web architectures, and cloud services.
+                    </p>
+                </div>
 
-                    <!-- Cert 5 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="300">
-                        <div class="cert-img"><img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1332&auto=format&fit=crop" alt="Advanced HTML"></div>
-                        <div class="cert-content">
-                            <h4>Advanced HTML</h4>
-                            <p class="issuer">Infosys</p>
-                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_html-webdevelopment-continuouslearning-activity-7254487884282376192-kUoA?utm_source=share&utm_medium=member_desktop" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Cert 6 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="350">
-                        <div class="cert-img"><img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="JAVA"></div>
-                        <div class="cert-content">
-                            <h4>Core & Advanced JAVA</h4>
-                            <p class="issuer">Ypsilon IT Solutions</p>
-                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_advjava-internship-sait-activity-7399177875394048000-xEGs" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Cert 7 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="400">
-                        <div class="cert-img"><img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Deep Learning"></div>
-                        <div class="cert-content">
-                            <h4>Deep Learning (12 weeks)</h4>
-                            <p class="issuer">NPTEL</p>
-                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_iit-ropar-certificate-activity-7397289941921095681-xTfG" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Cert 8 -->
-                    <div class="cert-card glass-card reveal fade-up" data-delay="450">
-                        <div class="cert-img"><img src="https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg" alt="TechSaksham"></div>
-                        <div class="cert-content">
-                            <h4>AI Internship (2 Months)</h4>
-                            <p class="issuer">TechSaksham</p>
-                            <a href="https://www.linkedin.com/posts/karanxprajapatix1_certificate-of-internship-activity-7316116987288424448-0_4a" target="_blank" class="cert-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-
+                <!-- Experience 5: Zuno by foundit -->
+                <div class="card-modern bento-card bento-half reveal fade-up" data-delay="300">
+                    <div class="card-icon-modern"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Campus Ambassador</h3>
+                    <div class="highlight-badge" style="margin-bottom: 0.85rem;">Zuno by foundit | Dec 2024 – Mar 2025 | Indore, MP</div>
+                    <p>
+                        Represented the career and internship platform on campus, conducting student engagement sessions, career awareness drives, and platform adoption campaigns.
+                    </p>
                 </div>
             </div>
-            
-            <div class="swipe-hint">
-                <i class="fas fa-arrows-alt-h"></i> Swipe to see more
-            </div>
-
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="contact-wrapper reveal fade-up">
-                <div class="section-header">
-                    <h2 class="section-title">Initiate <span class="text-gradient">Connection</span></h2>
-                    <p class="contact-subtitle">Actively seeking internships, part-time engineering roles, and high-impact freelance collaborations in the AI/ML space.</p>
+        <!-- Certifications Section (from Resume) -->
+        <section id="certifications" class="section">
+            <div class="section-header reveal fade-up">
+                <span class="section-tag">Accreditations</span>
+                <h2 class="section-title">Verified <span class="text-gradient">Certifications</span></h2>
+                <p class="section-subtitle">Professional credentials across Oracle Cloud AI, cybersecurity, deep learning, and programming.</p>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="certifications-wrapper">
+                <!-- Navigation Controls for Slider -->
+                <div class="cert-controls">
+                    <button class="cert-nav-btn" id="cert-prev" aria-label="Previous Certification"><i class="fas fa-chevron-left"></i></button>
+                    <button class="cert-nav-btn" id="cert-next" aria-label="Next Certification"><i class="fas fa-chevron-right"></i></button>
                 </div>
 
-                <div class="contact-grid">
-                    <div class="contact-info glass-card">
-                        <h3>Start the Dialogue</h3>
-                        <p>Whether you're exploring generative AI models or need a robust technical infrastructure, I'm here to translate complex concepts into elegant, production-ready code. Reach out, and let's build the future together.</p>
+                <!-- Scroll Snap Container -->
+                <div class="certifications-scroll-container" id="cert-scroll-container">
+                    <div class="certifications-slider">
                         
+                        <!-- Cert 1: Oracle Cloud Infrastructure 2025 AI Foundations -->
+                        <div class="cert-card reveal fade-up" data-delay="100">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Oracle • 2025</span>
+                                <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Oracle Cloud Infrastructure AI Foundations">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Oracle Cloud Infrastructure 2025: Certified AI Foundations Associate</h4>
+                                <p class="issuer">Oracle University</p>
+                                <a href="https://www.linkedin.com/in/karanxprajapatix1/" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 2: Career Essentials in Cybersecurity -->
+                        <div class="cert-card reveal fade-up" data-delay="150">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Microsoft & LinkedIn</span>
+                                <img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Career Essentials in Cybersecurity">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Career Essentials in Cybersecurity</h4>
+                                <p class="issuer">Microsoft and LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/karanxprajapatix1/" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 3: Python Programming with Examples -->
+                        <div class="cert-card reveal fade-up" data-delay="200">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Python Mastery</span>
+                                <img src="https://images.pexels.com/photos/2292837/pexels-photo-2292837.jpeg" alt="Python Programming with Examples">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Python Programming with Examples</h4>
+                                <p class="issuer">Verified Certification</p>
+                                <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-c4014be1-e519-49c3-8db8-741c089dc341.jpg" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 4: Java Bootcamp & Foundations -->
+                        <div class="cert-card reveal fade-up" data-delay="250">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Java Engineering</span>
+                                <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Java Bootcamp">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Java Bootcamp & DSA Foundations</h4>
+                                <p class="issuer">Ypsilon IT Solutions</p>
+                                <a href="https://www.linkedin.com/posts/karanxprajapatix1_advjava-internship-sait-activity-7399177875394048000-xEGs" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 5: AI Builders Lab -->
+                        <div class="cert-card reveal fade-up" data-delay="300">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">GenAI Lab</span>
+                                <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1332&auto=format&fit=crop" alt="AI Builders Lab">
+                            </div>
+                            <div class="cert-content">
+                                <h4>AI Builders Lab</h4>
+                                <p class="issuer">AI Innovation Hub</p>
+                                <a href="https://www.linkedin.com/in/karanxprajapatix1/" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 6: Deep Learning NPTEL / IIT Ropar -->
+                        <div class="cert-card reveal fade-up" data-delay="350">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">NPTEL • IIT Ropar</span>
+                                <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg" alt="Deep Learning IIT Ropar">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Deep Learning (12-Week Intensive)</h4>
+                                <p class="issuer">NPTEL / IIT Ropar</p>
+                                <a href="https://www.linkedin.com/posts/karanxprajapatix1_iit-ropar-certificate-activity-7397289941921095681-xTfG" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 7: TechSaksham AI Internship -->
+                        <div class="cert-card reveal fade-up" data-delay="400">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Microsoft & SAP</span>
+                                <img src="https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg" alt="TechSaksham AI Internship">
+                            </div>
+                            <div class="cert-content">
+                                <h4>AI Internship (2 Months)</h4>
+                                <p class="issuer">TechSaksham Initiative</p>
+                                <a href="https://www.linkedin.com/posts/karanxprajapatix1_certificate-of-internship-activity-7316116987288424448-0_4a" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Cert 8: Deloitte Cyber Job Simulation -->
+                        <div class="cert-card reveal fade-up" data-delay="450">
+                            <div class="cert-img">
+                                <span class="cert-issuer-badge">Deloitte</span>
+                                <img src="https://eu-images.contentstack.com/v3/assets/blt69509c9116440be8/blt8ffb90a2f64bacfa/6776f4544b281ca5e2bc465a/cybersecurity_NicoElNino-AlamyStockPhoto.jpg?disable=upscale&width=1200&height=630&fit=crop" alt="Deloitte Cyber Job Simulation">
+                            </div>
+                            <div class="cert-content">
+                                <h4>Cyber Job Simulation</h4>
+                                <p class="issuer">Deloitte</p>
+                                <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_zEc27JBckZjeLT7oE_1750849134410_completion_certificate.pdf" target="_blank" class="cert-link">
+                                    Verify Credential <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="swipe-hint">
+                    <i class="fas fa-arrows-alt-h"></i> Swipe horizontally to explore credentials
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (STRICT: NO CONTACT NUMBER SHOWN OR STORED) -->
+        <section id="contact" class="section">
+            <div class="contact-wrapper reveal fade-up">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-tag">Direct Dialogue</span>
+                        <h3>Let's Build Scalable Software Together</h3>
+                        <p>
+                            Currently serving as <strong>Associate Software Engineer (Java Development) – L1 at Infotact Solutions</strong> in Bengaluru and Co-Founder at <strong>The VisarG galaxy</strong>. Eager to connect for technical discussions, engineering collaborations, and impactful software initiatives.
+                        </p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <h6>Email Address</h6>
+                                    <p>
+                                        <a href="mailto:karanpraja6@gmail.com" id="email-text">karanpraja6@gmail.com</a>
+                                        <button class="copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email">
+                                            <i class="far fa-copy"></i>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <h6>Location</h6>
+                                    <p>Greater Indore Area & Bengaluru, India</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon-box">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <h6>Current Work Status</h6>
+                                    <p>Associate Software Engineer @ Infotact Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Profiles from Resume -->
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/KaranXNandkishore01" class="social-btn" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://karanx1.medium.com/" class="social-btn" target="_blank"><i class="fab fa-medium"></i></a>
-                            <a href="mailto:karanpraja6@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/KaranXNandkishore01" class="social-btn" target="_blank" title="GitHub" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://leetcode.com/" class="social-btn" target="_blank" title="LeetCode" aria-label="LeetCode">
+                                <i class="fas fa-terminal"></i>
+                            </a>
+                            <a href="https://karanx1.medium.com/" class="social-btn" target="_blank" title="Medium Blog" aria-label="Medium">
+                                <i class="fab fa-medium-m"></i>
+                            </a>
+                            <a href="https://developers.google.com/" class="social-btn" target="_blank" title="Google Developer Profile" aria-label="Google Developer Profile">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="mailto:karanpraja6@gmail.com" class="social-btn" title="Email" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="contact-form-container glass-card">
+                    <div class="contact-form-container">
                         <form id="contactForm" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" placeholder="John Doe" required>
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" placeholder="Alex Morgan" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="tel" id="phone" placeholder="+1 234 567 8900" required>
+                                    <label for="email">Your Email Address</label>
+                                    <input type="email" id="email" placeholder="alex@company.com" required>
                                 </div>
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" placeholder="Project Inquiry" required>
+                                <label for="subject">Inquiry Subject</label>
+                                <input type="text" id="subject" placeholder="SDE Role / Full-Stack Project / ML Collaboration" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" rows="4" placeholder="Describe your vision, project, or opportunity..." required></textarea>
+                                <label for="message">Detailed Message</label>
+                                <textarea id="message" rows="4" placeholder="Describe the role requirements, project goals, or opportunity..." required></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">Transmit Message <i class="fas fa-paper-plane"></i></button>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Transmit Message <i class="fas fa-paper-plane"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -385,32 +830,72 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer id="footer-section" class="footer">
         <div class="footer-container">
-            <div class="footer-info">
-                <h3>Karan <span class="text-gradient">Prajapati.</span></h3>
-                <p>AI/ML Engineer & Generative AI Expert</p>
-                <div class="footer-details">
-                    <span><i class="fas fa-map-marker-alt"></i> Indore, India</span>
-                    <span><i class="fas fa-envelope"></i> <a href="mailto:karanpraja6@gmail.com">karanpraja6@gmail.com</a></span>
+            <div class="footer-brand">
+                <a href="#hero" class="logo" style="margin-bottom: 0.75rem;">
+                    <span class="logo-mark">
+                        <img src="logo.png" alt="Karan Prajapati">
+                    </span>
+                    <span>Karan <span class="logo-accent">Prajapati</span></span>
+                </a>
+                <p>Associate Software Engineer (Java Development) @ Infotact Solutions | Full-Stack Engineer × GenAI Specialist | Co-Founder at The VisarG galaxy.</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/karanxprajapatix1/" class="social-btn" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/KaranXNandkishore01" class="social-btn" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://karanx1.medium.com/" class="social-btn" target="_blank" aria-label="Medium"><i class="fab fa-medium-m"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="#about">Summary</a>
+                    <a href="#skills">Technical Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Direct Reach</h4>
+                <div class="footer-links">
+                    <span><i class="fas fa-map-marker-alt text-navy"></i> Indore, Madhya Pradesh, India</span>
+                    <span><i class="fas fa-envelope text-navy"></i> karanpraja6@gmail.com</span>
+                    <span><i class="fas fa-graduation-cap text-navy"></i> Sri Aurobindo Institute of Technology</span>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Built by <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank" class="text-gradient">TheVisargGalaxy</a>. Handcrafted with <i class="fas fa-heart text-gradient"></i>.</p>
+            <p>&copy; 2026 Karan Prajapati. Co-founder of <a href="https://sites.google.com/view/thevisarggalaxy/home" target="_blank">The VisarG Galaxy</a>.</p>
+            <p>Engineered with elegance, clarity, and precision.</p>
         </div>
     </footer>
 
-    <!-- Thank You Popup Modal -->
-    <div id="thank-you-popup" class="popup-overlay hidden">
-        <div class="popup-content glass-card">
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Interactive Thank You Popup Modal -->
+    <div id="thank-you-popup" class="popup-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="popup-content">
             <div class="popup-icon">
                 <i class="fas fa-check-circle"></i>
             </div>
-            <h3>Transmission Successful</h3>
-            <p>Thank you for reaching out! I've received your data packet and will get back to you shortly.</p>
-            <button id="close-popup-btn" class="btn btn-primary w-100">Acknowledge</button>
+            <h3 id="modal-title">Message Received</h3>
+            <p>Thank you for reaching out! Your inquiry packet has been received. I will review your message and reply promptly.</p>
+            <button id="close-popup-btn" class="btn btn-primary w-100">Dismiss</button>
         </div>
+    </div>
+
+    <!-- Toast Notification for Copy / Feedback -->
+    <div id="toast-notice" class="toast-notice" role="status">
+        <i class="fas fa-check"></i> <span id="toast-message">Email copied to clipboard!</span>
     </div>
 
     <script src="script.js"></script>
