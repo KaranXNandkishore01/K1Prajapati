@@ -1791,9 +1791,32 @@ img {
 }
 
 /* =========================================================================
-   RESPONSIVE DESIGN (Tablets & Mobile)
+   RESPONSIVE DESIGN (Desktop, Tablet & Mobile Multi-Tier Adaptation)
    ========================================================================= */
-@media (max-width: 1024px) {
+
+/* Prevent any accidental horizontal wobble across all viewports */
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 1. TABLET SCREENS (769px to 1024px: iPad, Tablets, Small Laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --nav-height: 72px;
+    }
+
+    .section {
+        padding: 5.5rem 4%;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 2.5rem);
+        padding-bottom: 4rem;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         gap: 3.5rem;
@@ -1807,28 +1830,77 @@ img {
     }
 
     .hero-desc {
-        max-width: 600px;
+        max-width: 620px;
+    }
+
+    .hero-frame {
+        max-width: 340px;
+        margin: 0 auto;
     }
 
     .hero-metrics {
         width: 100%;
-        max-width: 600px;
+        max-width: 650px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
 
+    /* Balanced 2-Column Bento Grid on Tablet */
     .about-bento-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
-    .bento-bio, .bento-stats, .bento-edu, .bento-experience, .bento-interests, .bento-half {
+    .bento-bio {
+        grid-column: span 2;
+    }
+
+    .bento-stats {
         grid-column: span 1;
     }
 
-    .footer-container {
+    .bento-edu {
+        grid-column: span 1;
+    }
+
+    .bento-experience {
+        grid-column: span 1;
+    }
+
+    .bento-half {
+        grid-column: span 1;
+    }
+
+    .bento-interests {
+        grid-column: span 2;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
     }
 }
 
+/* 2. MOBILE SCREENS (768px and below: Phones & Phablets) */
 @media (max-width: 768px) {
     :root {
         --nav-height: 68px;
@@ -1839,7 +1911,11 @@ img {
     }
 
     .menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
     }
 
     .nav-container {
@@ -1848,19 +1924,21 @@ img {
         left: 0;
         width: 100%;
         height: calc(100vh - var(--nav-height));
+        height: calc(100dvh - var(--nav-height));
         background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem 3rem;
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
         border-top: 1px solid var(--border-light);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-container.active {
@@ -1871,54 +1949,172 @@ img {
     .nav-links {
         flex-direction: column;
         width: 100%;
-        gap: 0.75rem;
+        gap: 0.65rem;
     }
 
     .nav-item {
         font-size: 1.15rem;
-        padding: 0.8rem 1.5rem;
+        padding: 0.85rem 1.5rem;
         text-align: center;
         width: 100%;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-cta-btn {
         margin: 1.5rem 0 0;
         width: 100%;
         max-width: 280px;
+        min-height: 44px;
+    }
+
+    /* Hero Responsive */
+    .hero-section {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 2rem);
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: clamp(2.3rem, 7.5vw, 3.4rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1.15rem, 4vw, 1.45rem);
+        justify-content: center;
+    }
+
+    .hero-desc {
+        max-width: 540px;
+        font-size: 1.02rem;
+        line-height: 1.65;
+        margin-bottom: 2rem;
+    }
+
+    .hero-frame {
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    .hero-floating-card {
+        padding: 0.5rem 0.85rem;
+        gap: 0.6rem;
+    }
+
+    .floating-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+
+    .floating-text h5 {
+        font-size: 0.78rem;
+    }
+
+    .floating-text p {
+        font-size: 0.68rem;
+    }
+
+    .floating-top-right {
+        top: -8px;
+        right: -8px;
+    }
+
+    .floating-bottom-left {
+        bottom: -8px;
+        left: -8px;
     }
 
     .hero-metrics {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    /* Bento Grid Mobile */
+    .about-bento-grid {
+        grid-template-columns: 1fr;
         gap: 1.25rem;
     }
 
-    .hero-floating-card {
-        padding: 0.6rem 0.85rem;
+    .bento-bio, .bento-stats, .bento-edu, .bento-experience, .bento-interests, .bento-half {
+        grid-column: span 1;
     }
 
-    .floating-top-right {
-        right: -10px;
+    .card-modern, .glass-card {
+        padding: 1.65rem 1.35rem;
+        border-radius: var(--radius-lg);
     }
 
-    .floating-bottom-left {
-        left: -10px;
+    /* Filter buttons wrap cleanly */
+    .skills-filter-nav {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
     }
 
+    .filter-btn {
+        padding: 0.45rem 1rem;
+        font-size: 0.82rem;
+        min-height: 40px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    /* Certifications Slider Card Width */
+    .cert-card {
+        width: min(300px, 80vw);
+    }
+
+    .cert-controls {
+        margin-bottom: 1rem;
+    }
+
+    .cert-nav-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Contact Mobile */
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2.25rem;
     }
 
     .contact-wrapper {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.25rem;
+        border-radius: var(--radius-lg);
     }
 
     .contact-form-container {
-        padding: 1.5rem;
+        padding: 1.35rem 1.15rem;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .swipe-hint {
@@ -1926,9 +2122,106 @@ img {
         animation: bounceX 2s infinite;
     }
 
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        gap: 0.75rem;
+    }
+}
+
+/* 3. SMALL PHONES (480px and below: iPhone SE, compact Android devices) */
+@media (max-width: 480px) {
+    .section {
+        padding: 3.75rem 4%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        gap: 0.5rem;
+    }
+
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+        padding: 5px;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 8.5vw, 2.7rem);
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 0.75rem;
+    }
+
+    .cta-group .btn {
+        width: 100%;
+        padding: 0.85rem 1.25rem;
+    }
+
+    .hero-frame {
+        max-width: 250px;
+    }
+
+    .floating-top-right {
+        top: -12px;
+        right: 0;
+    }
+
+    .floating-bottom-left {
+        bottom: -12px;
+        left: 0;
+    }
+
+    .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+    }
+
+    .metric-value {
+        font-size: 1.35rem;
+    }
+
+    .metric-label {
+        font-size: 0.72rem;
+    }
+
+    .interests-grid {
+        gap: 0.5rem;
+    }
+
+    .interest-chip {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 0.82rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+
+    .social-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .back-to-top {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 42px;
+        height: 42px;
     }
 }
 

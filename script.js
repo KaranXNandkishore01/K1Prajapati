@@ -39,6 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // Close menu when mobile CTA button is clicked
+        const mobileCta = navContainer.querySelector('.nav-cta-btn');
+        if (mobileCta) {
+            mobileCta.addEventListener('click', () => {
+                if (navContainer.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // Auto-close menu if resized to desktop/tablet
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navContainer.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
     }
 
     /* =========================================================================
