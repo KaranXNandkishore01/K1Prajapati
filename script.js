@@ -10,7 +10,7 @@
  * Paste your Google Apps Script Web App URL between the quotes below:
  * Example: const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx.../exec";
  */
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbzrIgvrqazLkZXu2sfsCw8f6JStxDm-IbajTtCWhaNJC2MwIyBTiTPPT7wNxRhkzzL9/exec";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwfWjf_21ikJJPV8Ir6E8fJ2zYumwuEf1eaSlufbgX_PLLhsi3NZMMmEpb6TpLToU_7/exec";
 
 document.addEventListener('DOMContentLoaded', () => {
 
