@@ -209,6 +209,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* =========================================================================
+       5.1 PROJECTS FILTERING INTERACTION
+       ========================================================================= */
+    const projectFilterBtns = document.querySelectorAll('.project-filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (projectFilterBtns.length && projectCards.length) {
+        projectFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                projectFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-project-filter');
+
+                projectCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-project-category') || '';
+                    if (filterValue === 'all' || cardCategory.includes(filterValue)) {
+                        card.style.display = 'flex';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(15px) scale(0.95)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 250);
+                    }
+                });
+            });
+        });
+    }
+
+    /* =========================================================================
        6. CERTIFICATIONS CAROUSEL BUTTONS
        ========================================================================= */
     const certScrollContainer = document.getElementById('cert-scroll-container');
