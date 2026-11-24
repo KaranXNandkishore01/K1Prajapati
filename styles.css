@@ -549,6 +549,35 @@ img {
     margin-top: 0.25rem;
 }
 
+.hero-link {
+    color: var(--navy-deep);
+    text-decoration: underline;
+    text-decoration-color: var(--blue-accent);
+    text-underline-offset: 3px;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+}
+
+.hero-link:hover {
+    color: var(--blue-accent);
+    text-decoration-color: var(--navy-deep);
+}
+
+a.metric-item.metric-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+a.metric-item.metric-link:hover {
+    transform: translateY(-2px);
+}
+
+a.metric-item.metric-link:hover .metric-value,
+a.metric-item.metric-link:hover .metric-label {
+    color: var(--blue-accent);
+}
+
 /* Hero Visual & Framing */
 .hero-visual {
     position: relative;
