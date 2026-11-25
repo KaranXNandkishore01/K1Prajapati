@@ -204,6 +204,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 250);
                     }
                 });
+
+                if (filterValue === 'design') {
+                    const designSection = document.getElementById('graphic-design');
+                    if (designSection) {
+                        designSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
             });
         });
     }

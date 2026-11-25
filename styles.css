@@ -1142,6 +1142,167 @@ a.metric-item.metric-link:hover .metric-label {
 }
 
 /* =========================================================================
+   GRAPHIC DESIGN & CREATIVE DIRECTION SECTION
+   ========================================================================= */
+.graphic-design-showcase {
+    position: relative;
+    margin-top: 4.5rem;
+    padding-top: 3.5rem;
+    border-top: 1px dashed var(--border-light);
+}
+
+.design-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.design-header-content {
+    max-width: 680px;
+}
+
+.design-main-title {
+    font-size: 1.85rem;
+    color: var(--navy-deep);
+    margin-top: 0.5rem;
+    line-height: 1.25;
+}
+
+.design-main-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-top: 0.5rem;
+}
+
+.behance-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.design-disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.design-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(30, 58, 138, 0.25);
+}
+
+.design-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.design-card h4 {
+    font-size: 1.25rem;
+    color: var(--navy-deep);
+    margin-bottom: 0.65rem;
+    line-height: 1.3;
+}
+
+.design-card p {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.design-card-featured {
+    grid-column: span 3;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+    border-color: rgba(30, 58, 138, 0.2);
+}
+
+.design-foundations-pills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+}
+
+.foundation-pill {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.foundation-pill:hover {
+    transform: translateY(-3px);
+    border-color: var(--blue-accent);
+    box-shadow: var(--shadow-sm);
+}
+
+.foundation-pill strong {
+    color: var(--navy-deep);
+    font-size: 0.98rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.foundation-pill span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+    .design-disciplines-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .design-card-featured {
+        grid-column: span 2;
+    }
+    .design-foundations-pills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .design-disciplines-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+    .design-card-featured {
+        grid-column: span 1;
+    }
+    .design-foundations-pills {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+    .design-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================================
    PROJECTS SECTION
    ========================================================================= */
 .projects-grid {
