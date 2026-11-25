@@ -830,6 +830,10 @@ a.metric-item.metric-link:hover .metric-label {
     grid-column: span 6;
 }
 
+.bento-third {
+    grid-column: span 4;
+}
+
 .bento-interests {
     grid-column: span 12;
 }
@@ -1985,7 +1989,8 @@ html, body {
         grid-column: span 1;
     }
 
-    .bento-half {
+    .bento-half,
+    .bento-third {
         grid-column: span 1;
     }
 
@@ -2170,7 +2175,7 @@ html, body {
         gap: 1.25rem;
     }
 
-    .bento-bio, .bento-stats, .bento-edu, .bento-experience, .bento-interests, .bento-half {
+    .bento-bio, .bento-stats, .bento-edu, .bento-experience, .bento-interests, .bento-half, .bento-third {
         grid-column: span 1;
     }
 
